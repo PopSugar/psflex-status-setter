@@ -1,8 +1,8 @@
 #!/bin/bash
-SLACKAPIKEY="xoxp-2178491338-417540491537-658754130946-47552f3ed48e205cb93b517786c99648"
 # PopSugar wifi ssid
 MYWORKSSID="POPSUGAR"
 
+SLACKAPIKEY=`osascript -e 'set T to text returned of (display dialog "Enter your Slack OAuth API key" buttons {"Cancel", "OK"} default button "OK" default answer "" with hidden answer)'`
 # Setting times to sleep in the script
 ENDHOUR=`osascript -e 'set T to text returned of (display dialog "What hour do you leave work?" buttons {"Cancel", "OK"} default button "OK" default answer 17)'`
 STARTHOUR=`osascript -e 'set T to text returned of (display dialog "What hour do you get to work?" buttons {"Cancel", "OK"} default button "OK" default answer 8)'`
