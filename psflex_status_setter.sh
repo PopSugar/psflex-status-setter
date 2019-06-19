@@ -4,8 +4,8 @@ MYWORKSSID="POPSUGAR"
 
 SLACKAPIKEY=`osascript -e 'set T to text returned of (display dialog "Enter your Slack OAuth API key" buttons {"Cancel", "OK"} default button "OK" default answer "" with hidden answer)'`
 # Setting times to sleep in the script
-ENDHOUR=`osascript -e 'set T to text returned of (display dialog "What hour do you leave work?" buttons {"Cancel", "OK"} default button "OK" default answer 17)'`
 STARTHOUR=`osascript -e 'set T to text returned of (display dialog "What hour do you get to work?" buttons {"Cancel", "OK"} default button "OK" default answer 8)'`
+ENDHOUR=`osascript -e 'set T to text returned of (display dialog "What hour do you leave work?" buttons {"Cancel", "OK"} default button "OK" default answer 17)'`
 
 # Detemine if api key is valid
 IS_VALID=`curl https://slack.com/api/auth.test --data 'token='$SLACKAPIKEY |     python -c "import sys, json; print json.load(sys.stdin)['ok']"`
