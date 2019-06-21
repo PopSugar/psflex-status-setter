@@ -24,10 +24,10 @@ slack_token=\""$SLACKAPIKEY"\"
 
 if [ \"\$ssid\" == \"$MYWORKSSID\" ]; then
     # set status to 'In the Office'
-    /usr/bin/curl https://slack.com/api/users.profile.set --data 'token='\$slack_token'&profile=%7B%22status_text%22%3A%20%22In%20the%20office%22%2C%22status_emoji%22%3A%20%22%3Aoffice%3A%22%7D' > /dev/null
+    /usr/bin/curl https://slack.com/api/users.profile.set --data 'token='\$slack_token'&profile=%7B%22status_text%22%3A%20%22In%20the%20Office%22%2C%22status_emoji%22%3A%20%22%3Aoffice%3A%22%7D' > /dev/null
 else
     # set status to 'Working Remotely'
-    /usr/bin/curl https://slack.com/api/users.profile.set --data 'token='\$slack_token'&profile=%7B%22status_text%22%3A%20%22Working%20remotely%22%2C%22status_emoji%22%3A%20%22%3Ahouse_with_garden%3A%22%7D' > /dev/null
+    /usr/bin/curl https://slack.com/api/users.profile.set --data 'token='\$slack_token'&profile=%7B%22status_text%22%3A%20%22Working%20Remotely%22%2C%22status_emoji%22%3A%20%22%3Ahouse_with_garden%3A%22%7D' > /dev/null
 fi" > $slackstatus_shell_path
 	chmod a+x $slackstatus_shell_path
 	cat <<< '<?xml version="1.0" encoding="UTF-8"?>
