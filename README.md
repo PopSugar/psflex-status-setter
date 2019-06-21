@@ -24,4 +24,4 @@ If you are in the office you can test that the installation was successful by sw
 
 ### Engineers ###
 
-For engineers or command line comfortable employees, you can simply clone the repository, move into the directory, run the script with 'sh psflex_status_setter.sh', then input your token and start/end times.
+For engineers or command line comfortable employees, you can simply clone the repository, move into the directory, run the script with `sh psflex_status_setter.sh`, then input your token and start/end times.
