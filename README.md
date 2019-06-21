@@ -25,3 +25,11 @@ If you are in the office you can test that the installation was successful by sw
 ### Engineers ###
 
 For engineers or command line comfortable employees, you can simply clone the repository, move into the directory, run the script with `sh psflex_status_setter.sh`, then input your token and start/end times.
+
+### Turning it Off ###
+
+If you are on vacation or for any reason want to temporarily turn off the status setter you can simply rerun the application and enter the an end time equal to the start time.  Since your wifi network changes are only detected within the start and end time window if you enter 8 for both your start and end time your changes will never be detected.  You can then turn it back on by running it again!
+
+### Permanently Removing ###
+
+You can permanently remove this by deleting `local.slackstatus.plist` and `slackstatus.sh` which you can find by navigating to Library/LaunchAgents in your home directory.
